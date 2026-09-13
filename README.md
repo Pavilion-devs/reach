@@ -92,7 +92,7 @@ Single-switch / keyboard / pointer UI
           verified readback receipts
 ```
 
-The frontend renders choices and sends their IDs. The engine owns task stages, validation, approval and execution. Exact recipient, attachment and meeting details come from selected resources, not generated write commands. See [API_CONTRACT.md](API_CONTRACT.md).
+The frontend renders choices and sends their IDs. The engine owns task stages, validation, approval and execution. Exact recipient, attachment and meeting details come from selected resources, not generated write commands.
 
 ## Reliability and evaluation
 
@@ -105,14 +105,14 @@ The frontend renders choices and sends their IDs. The engine owns task stages, v
 | Arga Gmail | Draft/body/PDF readback, unique-marker discovery, one matching draft and zero sent messages |
 | Arga Drive and Calendar | Separately verified downloadable PDFs and a private hold without guests |
 
-See the [validation summary](docs/VALIDATION.md) for scope and limitations. Raw live-service reports contain account-linked IDs and task content and are deliberately excluded from Git. Verification scripts are included so checks can be reproduced with your own test resources.
+Raw live-service reports contain account-linked IDs and task content and are deliberately excluded from Git. Verification scripts are included so checks can be reproduced with your own test resources.
 
 ```sh
 npm run check
 npm test
 ```
 
-The backend tests require no external credentials or model calls. They cover stale and forged choices, concurrent approval, partial writes, incorrect readbacks, disk failure, abrupt process exit, recovery, resource changes and explicit request constraints.
+The backend tests use test doubles and require no external credentials or model calls. They cover stale and forged choices, concurrent approval, partial writes, incorrect readbacks, disk failure, abrupt process exit, recovery, resource changes and explicit request constraints.
 
 Optional browser regression suite:
 
@@ -122,6 +122,8 @@ npm run test:browser
 ```
 
 This launches an isolated **practice** server on port 4318 and refuses to reuse an existing server. Browser test sources are included; the latest integrated browser verification was performed separately in Codex’s browser. Generated outputs stay local.
+
+The six live model evaluations used simulated app actions; a passing injection example does not establish general prompt-injection resistance. Recovery screens inspected with synthetic fixtures are not evidence of live crash recovery.
 
 `node eval-anthropic.mjs` makes billable model calls using local credentials and simulated providers. The live Google verification scripts create test drafts/holds and retain journals; inspect them before running, and do not remove a journal simply to bypass a duplicate-write guard.
 
@@ -152,7 +154,24 @@ The Arga adapter rejects expired environments and recognized stub responses, and
 - Recovery can discover a draft by its unique marker and verify it. Missing, ambiguous or incomplete discovery never authorizes a repeat POST. A verified hold can continue to a never-attempted draft only after explicit approval and fresh checks; changed context stops that continuation.
 - Local task journals are owner-only plaintext files. Hosted task journals use private Vercel Blob storage. Google recovery requires the same connection, port and browser session cookie. There is no task-list UI or cookie-loss recovery. Demo app state is in memory; Arga tasks cannot resume across twin runs.
 - Switch/keyboard browser checks do not establish accessibility conformance. Testing with people who use alternative access is still needed.
-- **Deployed on Vercel:** public practice mode and an owner-authenticated live Google workspace, backed by private Blob journals and conditional writes. This is an owner-operated test deployment, not a multi-user OAuth service. See [deployment instructions and verification](docs/DEPLOYMENT.md). Local `npm start` still runs the loopback server.
+- **Deployed on Vercel:** public practice mode and an owner-authenticated live Google workspace, backed by private Blob journals and conditional writes. This is an owner-operated test deployment, not a multi-user OAuth service. Local `npm start` still runs the loopback server.
+
+## Deploy on Vercel
+
+1. Import this repository with the repository root as the project root. `vercel.json` configures Node.js 24, the `api/index.mjs` handler and static files in `public/`.
+2. Connect a **private Vercel Blob** store to the deployment for task snapshots and action journals.
+3. For the owner-only live workspace, configure these **production-only** environment variables:
+   - `REACH_OWNER_KEY`: a random secret of at least 32 characters.
+   - `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN`.
+   - `REACH_MESSAGE_ID`, `REACH_DRIVE_FOLDER_ID`, `REACH_CALENDAR_ID`, `REACH_TIMEZONE`, `REACH_SLOT_STARTS`.
+   - `ANTHROPIC_API_KEY`, `ANTHROPIC_MODEL`, and `ANTHROPIC_WORKSPACE_ID` if needed.
+4. Deploy, then verify practice completion and reload, rejection of unauthenticated live access, and owner-authorized execution with dedicated Google test resources.
+
+The public workspace uses practice mode. `/live` requires HTTP Basic authentication with username `owner` and the configured owner key. Provider selection is enforced by the server. Hosted OAuth is disabled; Google credentials come from the local setup above. Keep secrets out of frontend variables, public URLs and preview environments. Preview practice deployments need their own Blob connection.
+
+Private Blob journals use conditional ETag writes and a 330-second task claim, longer than the 300-second function limit. Interrupted tasks can be checked after the claim expires; uncertain writes are never blindly retried. Sessions expire after 24 hours, but expired blobs are not automatically deleted. Retention maintenance and public rate controls are still needed before sustained public use.
+
+Production verification covered real Google execution and receipt persistence, rejection of unauthorized live-session access, and a concurrent Blob update where the stale writer was rejected. The hosted API verification is separate from the local Space-key browser demo.
 
 ## Demo video
 
@@ -160,7 +179,7 @@ The Arga adapter rejects expired environments and recognized stub responses, and
 
 The demo follows a real Google test-account workflow: select a portfolio PDF and meeting time with the Space key, review the reply, recover from a deliberately introduced calendar conflict, and verify an unsent Gmail draft and a private calendar hold. It also summarizes the backend tests and separate Arga service checks. Footage is edited for pacing.
 
-Visit the [live Reach homepage](https://reach-lilac-mu.vercel.app/#home) or [open the public practice workspace](https://reach-lilac-mu.vercel.app/#app). Public practice mode uses simulated actions; the video shows the connected Google test account. The [demo runbook](DEMO_RUNBOOK.md) documents the workflow.
+Visit the [live Reach homepage](https://reach-lilac-mu.vercel.app/#home) or [open the public practice workspace](https://reach-lilac-mu.vercel.app/#app). Public practice mode uses simulated actions; the video shows the connected Google test account.
 
 ## Repository contents
 
