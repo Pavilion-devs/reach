@@ -6,6 +6,23 @@
 
 **[Watch the demo · 1:31](https://youtu.be/iDmX2GvqIyg)** · **[Visit the live homepage](https://reach-lilac-mu.vercel.app/#home)** · [Try the practice workspace](https://reach-lilac-mu.vercel.app/#app)
 
+## Table of contents
+
+- [Project overview](#project-overview)
+- [What Reach does](#what-it-does)
+- [External apps and services](#external-apps-and-services)
+- [Local setup](#local-setup)
+- [Connect Google and Anthropic](#connect-google-and-anthropic)
+- [Architecture](#architecture)
+- [How we tested reliability](#reliability-and-evaluation)
+- [How we used Arga](#how-we-used-arga)
+- [Current limitations](#current-limitations)
+- [Deploy on Vercel](#deploy-on-vercel)
+- [Demo video](#demo-video)
+- [Repository contents](#repository-contents)
+
+## Project overview
+
 Reach helps someone prepare a reply across **Gmail, Google Drive and Google Calendar** using a switch mapped to the Space key. The person chooses the response, attachment, time and wording. Reach gathers the context, prepares the steps and verifies the results.
 
 Built for the Multi-App AI Agent Hackathon. Reach is a working prototype deployed on Vercel, with a real Anthropic planner, live Google integrations and separately tested Arga service twins.
@@ -22,7 +39,20 @@ If the selected time becomes unavailable, Reach preserves the wording and attach
 
 There is no send-mail endpoint. Reach does not share Drive files, invite meeting guests or assume that the other person is available.
 
-## Try it locally — no accounts or API keys required
+## External apps and services
+
+| App or service | Role in Reach |
+| --- | --- |
+| Gmail | Reads the configured request and creates an unsent reply draft with the selected PDF attached. |
+| Google Drive | Lists portfolio PDFs and retrieves the selected file’s contents. |
+| Google Calendar | Checks candidate times and creates a private hold without guests. |
+| Anthropic | Interprets requests and proposes structured plans and reply wording; the engine controls provider writes. |
+| Arga Labs | Provides service twins for separate Gmail, Drive and Calendar integration checks. See [how we used Arga](#how-we-used-arga). |
+| Vercel and private Blob storage | Host the app and persist task snapshots and action journals. |
+
+## Local setup
+
+Practice mode requires no accounts or API keys.
 
 Use Node.js 24 and npm. The hosted runtime and Blob SDK are configured for this version.
 
@@ -127,7 +157,7 @@ The six live model evaluations used simulated app actions; a passing injection e
 
 `node eval-anthropic.mjs` makes billable model calls using local credentials and simulated providers. The live Google verification scripts create test drafts/holds and retain journals; inspect them before running, and do not remove a journal simply to bypass a duplicate-write guard.
 
-## Arga integration
+## How we used Arga
 
 Install and authenticate the [official Arga CLI](https://docs.argalabs.com/cli-and-mcp). Python 3 is needed for the provisioning helper.
 
@@ -146,7 +176,7 @@ The account used for development allowed one twin per run. A simultaneous three-
 
 The Arga adapter rejects expired environments and recognized stub responses, and cannot fall back to real Google token refresh or uploads. The reusable contribution is a user-controlled workflow with explicit approval, verifiable outcomes and failure cases that can be exercised against service twins. No Lemma integration is implemented.
 
-## Current limits and deployment
+## Current limitations
 
 - Supported actions are portfolio sharing, proposing a 30-minute meeting, or both. This is not an unrestricted assistant.
 - Deterministic checks cover explicit numeric durations, ISO dates and latest-file selection; they do not comprehensively parse every natural-language condition.
