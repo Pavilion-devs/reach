@@ -1,12 +1,14 @@
+![Reach — Your next move. One switch away. Built for the Multi-App AI Agent Hackathon, Arga Labs × Lemma AI.](docs/assets/reach-banner.png)
+
 # Reach
 
 **Your next move. One switch away.**
 
-[Try Reach online](https://reach-lilac-mu.vercel.app/#home) · [Open the practice workspace](https://reach-lilac-mu.vercel.app/#app)
+**[Watch the demo · 1:31](https://youtu.be/iDmX2GvqIyg)** · **[Visit the live homepage](https://reach-lilac-mu.vercel.app/#home)** · [Try the practice workspace](https://reach-lilac-mu.vercel.app/#app)
 
 Reach helps someone prepare a reply across **Gmail, Google Drive and Google Calendar** using a switch mapped to the Space key. The person chooses the response, attachment, time and wording. Reach gathers the context, prepares the steps and verifies the results.
 
-Built for the Multi-App AI Agent Hackathon. This is a working local prototype, with a real Anthropic planner, live Google integrations and separately tested Arga service twins.
+Built for the Multi-App AI Agent Hackathon. Reach is a working prototype deployed on Vercel, with a real Anthropic planner, live Google integrations and separately tested Arga service twins.
 
 ## What it does
 
@@ -154,7 +156,11 @@ The Arga adapter rejects expired environments and recognized stub responses, and
 
 ## Demo video
 
-The submission video is **not yet recorded**. The required maximum is two minutes. The [demo runbook](DEMO_RUNBOOK.md) describes the verified flow; an accessible video link will be added after recording.
+**[Watch the 1:31 demo on YouTube](https://youtu.be/iDmX2GvqIyg)**
+
+The demo follows a real Google test-account workflow: select a portfolio PDF and meeting time with the Space key, review the reply, recover from a deliberately introduced calendar conflict, and verify an unsent Gmail draft and a private calendar hold. It also summarizes the backend tests and separate Arga service checks. Footage is edited for pacing.
+
+Visit the [live Reach homepage](https://reach-lilac-mu.vercel.app/#home) or [open the public practice workspace](https://reach-lilac-mu.vercel.app/#app). Public practice mode uses simulated actions; the video shows the connected Google test account. The [demo runbook](DEMO_RUNBOOK.md) documents the workflow.
 
 ## Repository contents
 
