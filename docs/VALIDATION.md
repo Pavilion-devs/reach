@@ -4,7 +4,7 @@ Recorded September 13, 2026. This is a sanitized summary of development evidence
 
 ## Reproducible checks
 
-`npm test` passed all 43 backend tests. They include process exit after a pre-write journal checkpoint, disk write failure, uncertain provider responses, duplicate approval, verified recovery, changed resources and deterministic constraint checks. These use test doubles and do not call Google, Anthropic or Arga.
+`npm test` passed all 48 backend tests after the hosted-runtime additions. They include process exit after a pre-write journal checkpoint, disk write failure, uncertain provider responses, duplicate approval, verified recovery, changed resources and deterministic constraint checks. These use test doubles and do not call Google, Anthropic or Arga.
 
 `npm run check` checks JavaScript syntax. The optional Playwright suite is configured to run only against its isolated practice server; it is distinct from the live browser demonstration below.
 
@@ -28,4 +28,4 @@ A simultaneous three-twin provisioning attempt was rejected. Full multi-app Arga
 
 ## Remaining work
 
-Hosted deployment and the two-minute submission video are pending. End-user accessibility testing, broad natural-language constraint coverage, production-scale persistence and comprehensive fault coverage remain outside the evidence above.
+Hosted deployment has been verified as described in [DEPLOYMENT.md](DEPLOYMENT.md). The two-minute submission video is pending. End-user accessibility testing, broad natural-language constraint coverage, production-scale persistence and comprehensive fault coverage remain outside the evidence above.

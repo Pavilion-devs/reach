@@ -12,13 +12,16 @@
     "arga:status": "python3 arga-setup.py status",
     "arga:verify": "node arga-verify.mjs",
     "arga:teardown": "python3 arga-setup.py teardown",
-    "check": "node --check server.mjs && node --check src/engine.mjs && node --check src/providers.mjs && node --check public/app.js && node --check src/planner.mjs"
+    "check": "node --check server.mjs && node --check src/engine.mjs && node --check src/providers.mjs && node --check public/app.js && node --check src/planner.mjs && node --check src/hosted-handler.mjs && node --check src/blob-task-store.mjs && node --check api/index.mjs"
   },
   "devDependencies": {
-    "@playwright/test": "1.63.0",
-    "@axe-core/playwright": "4.10.2"
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.63.0"
   },
   "engines": {
-    "node": ">=18.20"
+    "node": "24.x"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.0"
   }
 }

@@ -41,3 +41,7 @@ __pycache__/
 *.py[cod]
 *.tmp
 *.swp
+
+.deployment-*
+.vercel
+.env*

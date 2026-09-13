@@ -2,6 +2,8 @@
 
 **Your next move. One switch away.**
 
+[Try Reach online](https://reach-lilac-mu.vercel.app/#home) · [Open the practice workspace](https://reach-lilac-mu.vercel.app/#app)
+
 Reach helps someone prepare a reply across **Gmail, Google Drive and Google Calendar** using a switch mapped to the Space key. The person chooses the response, attachment, time and wording. Reach gathers the context, prepares the steps and verifies the results.
 
 Built for the Multi-App AI Agent Hackathon. This is a working local prototype, with a real Anthropic planner, live Google integrations and separately tested Arga service twins.
@@ -20,7 +22,7 @@ There is no send-mail endpoint. Reach does not share Drive files, invite meeting
 
 ## Try it locally — no accounts or API keys required
 
-Use Node.js 20 or newer and npm. The server supports Node 18.20+, but a newer version is recommended for the browser test toolchain.
+Use Node.js 24 and npm. The hosted runtime and Blob SDK are configured for this version.
 
 ```sh
 git clone https://github.com/Pavilion-devs/reach.git
@@ -94,7 +96,7 @@ The frontend renders choices and sends their IDs. The engine owns task stages, v
 
 | Evidence | Verified result |
 | --- | --- |
-| Backend regression suite | **43 tests passed** on September 13, 2026 |
+| Backend regression suite | **48 tests passed** on September 13, 2026 |
 | Live Anthropic evaluation | Six cases passed: combined task, portfolio only, meeting only, unsupported payment, unsupported duration and injected instructions |
 | Finished UI + real Google + real Sonnet | Space-key task selections completed request → tone revision → calendar conflict → targeted repair → approved execution → three verified receipts |
 | Restart | The completed live task and its receipts survived a server restart and browser reload |
@@ -140,15 +142,15 @@ The account used for development allowed one twin per run. A simultaneous three-
 
 The Arga adapter rejects expired environments and recognized stub responses, and cannot fall back to real Google token refresh or uploads. The reusable contribution is a user-controlled workflow with explicit approval, verifiable outcomes and failure cases that can be exercised against service twins. No Lemma integration is implemented.
 
-## Current limits and deployment status
+## Current limits and deployment
 
 - Supported actions are portfolio sharing, proposing a 30-minute meeting, or both. This is not an unrestricted assistant.
 - Deterministic checks cover explicit numeric durations, ISO dates and latest-file selection; they do not comprehensively parse every natural-language condition.
 - Google writes are not transactional. Another calendar event can arrive after the availability check.
 - Recovery can discover a draft by its unique marker and verify it. Missing, ambiguous or incomplete discovery never authorizes a repeat POST. A verified hold can continue to a never-attempted draft only after explicit approval and fresh checks; changed context stops that continuation.
-- Task journals are owner-only local plaintext files. Google recovery requires the same connection, port and browser session cookie. There is no task-list UI or cookie-loss recovery. Demo app state is in memory; Arga tasks cannot resume across twin runs.
+- Local task journals are owner-only plaintext files. Hosted task journals use private Vercel Blob storage. Google recovery requires the same connection, port and browser session cookie. There is no task-list UI or cookie-loss recovery. Demo app state is in memory; Arga tasks cannot resume across twin runs.
 - Switch/keyboard browser checks do not establish accessibility conformance. Testing with people who use alternative access is still needed.
-- **This repository currently runs a loopback-only Node server. It is not yet adapted for Vercel.** Hosted deployment needs an appropriate server/API runtime, persistent storage, hosted OAuth callbacks and access/session controls. Deployment work is a separate next step.
+- **Deployed on Vercel:** public practice mode and an owner-authenticated live Google workspace, backed by private Blob journals and conditional writes. This is an owner-operated test deployment, not a multi-user OAuth service. See [deployment instructions and verification](docs/DEPLOYMENT.md). Local `npm start` still runs the loopback server.
 
 ## Demo video
 
