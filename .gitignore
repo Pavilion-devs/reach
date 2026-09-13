@@ -1,0 +1,43 @@
+# Local credentials and downloaded OAuth clients
+.env
+.env.*
+!.env.example
+.anthropic.env*
+*.pem
+*.key
+google-client.json
+client_secret*.json
+credentials*.json
+
+# Account setup, service twin credentials and private task journals
+.setup-state*
+.arga-*.json
+.tasks-*/
+
+# Dependencies, builds and deployment-local state
+node_modules/
+dist/
+build/
+coverage/
+.vercel/
+
+# Generated reports, screenshots, traces and raw live-service receipts
+artifacts/
+test-results/
+playwright-report/
+blob-report/
+*.log
+*.tsbuildinfo
+
+# Local coordination/account notes (public setup instructions are in README.md)
+SETUP.md
+public/UI_HANDOFF.md
+
+# Editor and operating system files
+.DS_Store
+.vscode/
+.idea/
+__pycache__/
+*.py[cod]
+*.tmp
+*.swp

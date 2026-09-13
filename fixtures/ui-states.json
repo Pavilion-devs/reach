@@ -1,0 +1,3093 @@
+{
+  "synthetic": true,
+  "description": "Fictional UI examples. No real model or provider actions. Not evaluation evidence.",
+  "states": {
+    "intent": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "intent",
+      "revision": 1,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": null,
+      "choices": [
+        {
+          "id": "prepare",
+          "title": "Prepare a reply",
+          "description": "Review the resources before creating anything.",
+          "icon": "spark"
+        },
+        {
+          "id": "read",
+          "title": "Read the full request",
+          "description": "Take as much time as you need.",
+          "icon": "mail"
+        },
+        {
+          "id": "decline",
+          "title": "Politely decline",
+          "description": "Review a short reply before creating a draft.",
+          "icon": "minus"
+        },
+        {
+          "id": "cancel",
+          "title": "Leave this for later",
+          "description": "Finish without changing anything.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        }
+      ],
+      "error": null
+    },
+    "source": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "source",
+      "revision": 2,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": null,
+      "choices": [
+        {
+          "id": "back",
+          "title": "Back to my choices",
+          "description": "Return to the request.",
+          "icon": "back"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "read",
+          "stage": "intent"
+        }
+      ],
+      "error": null
+    },
+    "file": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "file",
+      "revision": 4,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": null,
+      "choices": [
+        {
+          "id": "file:portfolio-current",
+          "title": "Selected work · 2026.pdf",
+          "description": "Suggested by Reach · A concise selection of your recent projects.",
+          "icon": "file"
+        },
+        {
+          "id": "file:portfolio-archive",
+          "title": "Selected work · 2025.pdf",
+          "description": "Your previous portfolio. Included so the choice stays yours.",
+          "icon": "file"
+        },
+        {
+          "id": "back",
+          "title": "Back to the request",
+          "description": "Choose a different response.",
+          "icon": "back"
+        },
+        {
+          "id": "cancel",
+          "title": "Stop here",
+          "description": "No changes will be made.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "read",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "back",
+          "stage": "source"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        }
+      ],
+      "error": null
+    },
+    "slot": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "slot",
+      "revision": 5,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": null,
+      "choices": [
+        {
+          "id": "slot:slot-0",
+          "title": "Monday 14 Sept, 11:00",
+          "description": "30 minutes · Africa/Lagos · Suggested by Reach",
+          "icon": "calendar"
+        },
+        {
+          "id": "slot:slot-1",
+          "title": "Monday 14 Sept, 14:00",
+          "description": "30 minutes · Africa/Lagos",
+          "icon": "calendar"
+        },
+        {
+          "id": "back",
+          "title": "Change the attachment",
+          "description": "Return to your files.",
+          "icon": "back"
+        },
+        {
+          "id": "cancel",
+          "title": "Stop here",
+          "description": "No changes will be made.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "read",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "back",
+          "stage": "source"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        }
+      ],
+      "error": null
+    },
+    "review": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "review",
+      "revision": 6,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": {
+        "id": "a91d200330f736f9d7da838fe521466e",
+        "recipient": "aya@northstar.example",
+        "subject": "Re: A little more about your work",
+        "decline": false,
+        "file": {
+          "id": "portfolio-current",
+          "name": "Selected work · 2026.pdf",
+          "size": 1080,
+          "modifiedTime": "2026-09-12T10:00:00Z",
+          "revision": "3",
+          "description": "A concise selection of your recent projects.",
+          "app": "Drive"
+        },
+        "slot": {
+          "id": "slot-0",
+          "start": "2026-09-14T10:00:00.000Z",
+          "end": "2026-09-14T10:30:00.000Z",
+          "app": "Calendar"
+        },
+        "holdTitle": "Hold · Call with Aya Okafor",
+        "timezone": "Africa/Lagos",
+        "body": "Hi Aya Okafor,\n\nThank you for your interest in my work.\n\nI’ve attached Selected work · 2026.pdf.\n\nWould Monday 14 Sept, 11:00 (Africa/Lagos) work for a 30-minute call?\n\nI look forward to hearing from you.",
+        "fragments": {
+          "acknowledgement": "Thank you for your interest in my work.",
+          "closing": "I look forward to hearing from you.",
+          "metadata": {
+            "model": "synthetic-ui-fixture"
+          }
+        },
+        "ai": {
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        "reviewHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a",
+        "expires": 1789337048564
+      },
+      "choices": [
+        {
+          "id": "revise",
+          "title": "Change the wording",
+          "description": "Make the reply shorter, warmer or more formal.",
+          "icon": "spark"
+        },
+        {
+          "id": "change",
+          "title": "Change my choices",
+          "description": "Go back before creating anything.",
+          "icon": "back"
+        },
+        {
+          "id": "approve",
+          "title": "Create draft + private hold",
+          "description": "Use exactly the details shown above. Nothing is sent.",
+          "icon": "check"
+        },
+        {
+          "id": "cancel",
+          "title": "Cancel this task",
+          "description": "Keep your apps as they are.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "read",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "back",
+          "stage": "source"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "choice.selected",
+          "choice": "slot:slot-0",
+          "stage": "slot"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "review.created",
+          "planId": "a91d200330f736f9d7da838fe521466e",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        }
+      ],
+      "error": null
+    },
+    "revise": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "revise",
+      "revision": 7,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": {
+        "id": "a91d200330f736f9d7da838fe521466e",
+        "recipient": "aya@northstar.example",
+        "subject": "Re: A little more about your work",
+        "decline": false,
+        "file": {
+          "id": "portfolio-current",
+          "name": "Selected work · 2026.pdf",
+          "size": 1080,
+          "modifiedTime": "2026-09-12T10:00:00Z",
+          "revision": "3",
+          "description": "A concise selection of your recent projects.",
+          "app": "Drive"
+        },
+        "slot": {
+          "id": "slot-0",
+          "start": "2026-09-14T10:00:00.000Z",
+          "end": "2026-09-14T10:30:00.000Z",
+          "app": "Calendar"
+        },
+        "holdTitle": "Hold · Call with Aya Okafor",
+        "timezone": "Africa/Lagos",
+        "body": "Hi Aya Okafor,\n\nThank you for your interest in my work.\n\nI’ve attached Selected work · 2026.pdf.\n\nWould Monday 14 Sept, 11:00 (Africa/Lagos) work for a 30-minute call?\n\nI look forward to hearing from you.",
+        "fragments": {
+          "acknowledgement": "Thank you for your interest in my work.",
+          "closing": "I look forward to hearing from you.",
+          "metadata": {
+            "model": "synthetic-ui-fixture"
+          }
+        },
+        "ai": {
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        "reviewHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a",
+        "expires": 1789337048564
+      },
+      "choices": [
+        {
+          "id": "tone:concise",
+          "title": "Make it shorter",
+          "description": "Keep the same attachment, time and intent.",
+          "icon": "spark"
+        },
+        {
+          "id": "tone:warm",
+          "title": "Make it warmer",
+          "description": "Friendly wording with the same facts.",
+          "icon": "spark"
+        },
+        {
+          "id": "tone:formal",
+          "title": "Make it more formal",
+          "description": "Professional wording with the same facts.",
+          "icon": "spark"
+        },
+        {
+          "id": "review_back",
+          "title": "Keep the current wording",
+          "description": "Return to the review.",
+          "icon": "back"
+        },
+        {
+          "id": "cancel",
+          "title": "Stop here",
+          "description": "No changes will be made.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "read",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "back",
+          "stage": "source"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "choice.selected",
+          "choice": "slot:slot-0",
+          "stage": "slot"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "review.created",
+          "planId": "a91d200330f736f9d7da838fe521466e",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "choice.selected",
+          "choice": "revise",
+          "stage": "review"
+        }
+      ],
+      "error": null
+    },
+    "complete": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {
+        "hold": {
+          "state": "verified",
+          "id": "slot-0"
+        },
+        "draft": {
+          "state": "verified",
+          "id": "draft-a91d200330f736f9d7da838fe521466e"
+        }
+      },
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "complete",
+      "revision": 9,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": {
+        "id": "a91d200330f736f9d7da838fe521466e",
+        "recipient": "aya@northstar.example",
+        "subject": "Re: A little more about your work",
+        "decline": false,
+        "file": {
+          "id": "portfolio-current",
+          "name": "Selected work · 2026.pdf",
+          "size": 1080,
+          "modifiedTime": "2026-09-12T10:00:00Z",
+          "revision": "3",
+          "description": "A concise selection of your recent projects.",
+          "app": "Drive"
+        },
+        "slot": {
+          "id": "slot-0",
+          "start": "2026-09-14T10:00:00.000Z",
+          "end": "2026-09-14T10:30:00.000Z",
+          "app": "Calendar"
+        },
+        "holdTitle": "Hold · Call with Aya Okafor",
+        "timezone": "Africa/Lagos",
+        "body": "Hi Aya Okafor,\n\nThank you for your interest in my work.\n\nI’ve attached Selected work · 2026.pdf.\n\nWould Monday 14 Sept, 11:00 (Africa/Lagos) work for a 30-minute call?\n\nI look forward to hearing from you.",
+        "fragments": {
+          "acknowledgement": "Thank you for your interest in my work.",
+          "closing": "I look forward to hearing from you.",
+          "metadata": {
+            "model": "synthetic-ui-fixture"
+          }
+        },
+        "ai": {
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        "reviewHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a",
+        "expires": 1789337048564
+      },
+      "choices": [],
+      "receipts": [
+        {
+          "app": "Drive",
+          "action": "Attachment read",
+          "id": "portfolio-current",
+          "verified": true,
+          "sha256": "1081f8b47be51dce128c343b5e1d8a95be4152128a9b32067379aff4d07c73b0"
+        },
+        {
+          "app": "Calendar",
+          "action": "Private hold created",
+          "id": "slot-0",
+          "verified": true
+        },
+        {
+          "app": "Gmail",
+          "action": "Reply draft created",
+          "id": "draft-a91d200330f736f9d7da838fe521466e",
+          "verified": true
+        }
+      ],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.554Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "read",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "back",
+          "stage": "source"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.555Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "choice.selected",
+          "choice": "slot:slot-0",
+          "stage": "slot"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "review.created",
+          "planId": "a91d200330f736f9d7da838fe521466e",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "choice.selected",
+          "choice": "revise",
+          "stage": "review"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "choice.selected",
+          "choice": "review_back",
+          "stage": "revise"
+        },
+        {
+          "at": "2026-09-13T21:54:08.564Z",
+          "event": "choice.selected",
+          "choice": "approve",
+          "stage": "review"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "approval.accepted",
+          "planId": "a91d200330f736f9d7da838fe521466e"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "attachment.read"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "calendar.verified",
+          "id": "slot-0"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "gmail.verified",
+          "id": "draft-a91d200330f736f9d7da838fe521466e"
+        }
+      ],
+      "error": null
+    },
+    "blocked": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [
+        "slot_unavailable"
+      ],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "blocked",
+      "revision": 5,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": {
+        "id": "6d54214a8cb3ea7b68a39979ff44d69b",
+        "recipient": "aya@northstar.example",
+        "subject": "Re: A little more about your work",
+        "decline": false,
+        "file": {
+          "id": "portfolio-current",
+          "name": "Selected work · 2026.pdf",
+          "size": 1080,
+          "modifiedTime": "2026-09-12T10:00:00Z",
+          "revision": "3",
+          "description": "A concise selection of your recent projects.",
+          "app": "Drive"
+        },
+        "slot": {
+          "id": "slot-0",
+          "start": "2026-09-14T10:00:00.000Z",
+          "end": "2026-09-14T10:30:00.000Z",
+          "app": "Calendar"
+        },
+        "holdTitle": "Hold · Call with Aya Okafor",
+        "timezone": "Africa/Lagos",
+        "body": "Hi Aya Okafor,\n\nThank you for your interest in my work.\n\nI’ve attached Selected work · 2026.pdf.\n\nWould Monday 14 Sept, 11:00 (Africa/Lagos) work for a 30-minute call?\n\nI look forward to hearing from you.",
+        "fragments": {
+          "acknowledgement": "Thank you for your interest in my work.",
+          "closing": "I look forward to hearing from you.",
+          "metadata": {
+            "model": "synthetic-ui-fixture"
+          }
+        },
+        "ai": {
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        "reviewHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a",
+        "expires": 1789337048565
+      },
+      "choices": [
+        {
+          "id": "repair",
+          "title": "Update only what changed",
+          "description": "Keep the wording and unaffected choices.",
+          "icon": "refresh"
+        },
+        {
+          "id": "refresh",
+          "title": "Review the latest information",
+          "description": "Your previous approval will not be reused.",
+          "icon": "refresh"
+        },
+        {
+          "id": "cancel",
+          "title": "Stop here",
+          "description": "Leave this task.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "choice.selected",
+          "choice": "slot:slot-0",
+          "stage": "slot"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "review.created",
+          "planId": "6d54214a8cb3ea7b68a39979ff44d69b",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "choice.selected",
+          "choice": "approve",
+          "stage": "review"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "approval.invalidated"
+        }
+      ],
+      "error": "Something changed after your review. Check the latest details before continuing."
+    },
+    "partial": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {
+        "hold": {
+          "state": "verified",
+          "id": "slot-0"
+        },
+        "draft": {
+          "state": "started"
+        }
+      },
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "partial",
+      "revision": 5,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": {
+        "id": "a685861ccff906220951e74fedb06076",
+        "recipient": "aya@northstar.example",
+        "subject": "Re: A little more about your work",
+        "decline": false,
+        "file": {
+          "id": "portfolio-current",
+          "name": "Selected work · 2026.pdf",
+          "size": 1080,
+          "modifiedTime": "2026-09-12T10:00:00Z",
+          "revision": "3",
+          "description": "A concise selection of your recent projects.",
+          "app": "Drive"
+        },
+        "slot": {
+          "id": "slot-0",
+          "start": "2026-09-14T10:00:00.000Z",
+          "end": "2026-09-14T10:30:00.000Z",
+          "app": "Calendar"
+        },
+        "holdTitle": "Hold · Call with Aya Okafor",
+        "timezone": "Africa/Lagos",
+        "body": "Hi Aya Okafor,\n\nThank you for your interest in my work.\n\nI’ve attached Selected work · 2026.pdf.\n\nWould Monday 14 Sept, 11:00 (Africa/Lagos) work for a 30-minute call?\n\nI look forward to hearing from you.",
+        "fragments": {
+          "acknowledgement": "Thank you for your interest in my work.",
+          "closing": "I look forward to hearing from you.",
+          "metadata": {
+            "model": "synthetic-ui-fixture"
+          }
+        },
+        "ai": {
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        "reviewHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a",
+        "expires": 1789337048565
+      },
+      "choices": [
+        {
+          "id": "reconcile",
+          "title": "Check saved app actions",
+          "description": "Read the apps without repeating writes.",
+          "icon": "refresh"
+        }
+      ],
+      "receipts": [
+        {
+          "app": "Drive",
+          "action": "Attachment read",
+          "id": "portfolio-current",
+          "verified": true,
+          "sha256": "1081f8b47be51dce128c343b5e1d8a95be4152128a9b32067379aff4d07c73b0"
+        },
+        {
+          "app": "Calendar",
+          "action": "Private hold created",
+          "id": "slot-0",
+          "verified": true
+        }
+      ],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "choice.selected",
+          "choice": "slot:slot-0",
+          "stage": "slot"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "review.created",
+          "planId": "a685861ccff906220951e74fedb06076",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        },
+        {
+          "at": "2026-09-13T21:54:08.565Z",
+          "event": "choice.selected",
+          "choice": "approve",
+          "stage": "review"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "approval.accepted",
+          "planId": "a685861ccff906220951e74fedb06076"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "attachment.read"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "calendar.verified",
+          "id": "slot-0"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "execution.stopped",
+          "code": "WRITE_UNCERTAIN",
+          "receipts": 2
+        }
+      ],
+      "error": "Gmail did not confirm the draft. Check the mailbox before trying again."
+    },
+    "portfolio_only_review": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": null,
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "review",
+      "revision": 3,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": {
+        "id": "e36482cf28d07f8b44ce2563b35ae4cd",
+        "recipient": "aya@northstar.example",
+        "subject": "Re: A little more about your work",
+        "decline": false,
+        "file": {
+          "id": "portfolio-current",
+          "name": "Selected work · 2026.pdf",
+          "size": 1080,
+          "modifiedTime": "2026-09-12T10:00:00Z",
+          "revision": "3",
+          "description": "A concise selection of your recent projects.",
+          "app": "Drive"
+        },
+        "slot": null,
+        "holdTitle": "Hold · Call with Aya Okafor",
+        "timezone": "Africa/Lagos",
+        "body": "Hi Aya Okafor,\n\nThank you for your interest in my work.\n\nI’ve attached Selected work · 2026.pdf.\n\nI look forward to hearing from you.",
+        "fragments": {
+          "acknowledgement": "Thank you for your interest in my work.",
+          "closing": "I look forward to hearing from you.",
+          "metadata": {
+            "model": "synthetic-ui-fixture"
+          }
+        },
+        "ai": {
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        "reviewHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a",
+        "expires": 1789337048566
+      },
+      "choices": [
+        {
+          "id": "revise",
+          "title": "Change the wording",
+          "description": "Make the reply shorter, warmer or more formal.",
+          "icon": "spark"
+        },
+        {
+          "id": "change",
+          "title": "Change my choices",
+          "description": "Go back before creating anything.",
+          "icon": "back"
+        },
+        {
+          "id": "approve",
+          "title": "Create this draft",
+          "description": "Use exactly the details shown above. Nothing is sent.",
+          "icon": "check"
+        },
+        {
+          "id": "cancel",
+          "title": "Cancel this task",
+          "description": "Keep your apps as they are.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "review.created",
+          "planId": "e36482cf28d07f8b44ce2563b35ae4cd",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        }
+      ],
+      "error": null
+    },
+    "meeting_only_review": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": null,
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "review",
+      "revision": 3,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": {
+        "id": "85903e954f66a18e5502e97802b5d556",
+        "recipient": "aya@northstar.example",
+        "subject": "Re: A little more about your work",
+        "decline": false,
+        "file": null,
+        "slot": {
+          "id": "slot-0",
+          "start": "2026-09-14T10:00:00.000Z",
+          "end": "2026-09-14T10:30:00.000Z",
+          "app": "Calendar"
+        },
+        "holdTitle": "Hold · Call with Aya Okafor",
+        "timezone": "Africa/Lagos",
+        "body": "Hi Aya Okafor,\n\nThank you for your interest in my work.\n\nWould Monday 14 Sept, 11:00 (Africa/Lagos) work for a 30-minute call?\n\nI look forward to hearing from you.",
+        "fragments": {
+          "acknowledgement": "Thank you for your interest in my work.",
+          "closing": "I look forward to hearing from you.",
+          "metadata": {
+            "model": "synthetic-ui-fixture"
+          }
+        },
+        "ai": {
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        "reviewHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a",
+        "expires": 1789337048566
+      },
+      "choices": [
+        {
+          "id": "revise",
+          "title": "Change the wording",
+          "description": "Make the reply shorter, warmer or more formal.",
+          "icon": "spark"
+        },
+        {
+          "id": "change",
+          "title": "Change my choices",
+          "description": "Go back before creating anything.",
+          "icon": "back"
+        },
+        {
+          "id": "approve",
+          "title": "Create draft + private hold",
+          "description": "Use exactly the details shown above. Nothing is sent.",
+          "icon": "check"
+        },
+        {
+          "id": "cancel",
+          "title": "Cancel this task",
+          "description": "Keep your apps as they are.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "choice.selected",
+          "choice": "slot:slot-0",
+          "stage": "slot"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "review.created",
+          "planId": "85903e954f66a18e5502e97802b5d556",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        }
+      ],
+      "error": null
+    },
+    "cancelled": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "cancelled",
+      "revision": 5,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": null,
+      "choices": [],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "choice.selected",
+          "choice": "slot:slot-0",
+          "stage": "slot"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "review.created",
+          "planId": "0ddb610936f1d0f593f254ab47c7198d",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "choice.selected",
+          "choice": "cancel",
+          "stage": "review"
+        }
+      ],
+      "error": null
+    },
+    "unsupported": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "unsupported",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": null,
+        "recommended_slot_id": null,
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "unsupported",
+      "revision": 1,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": null,
+      "choices": [
+        {
+          "id": "read",
+          "title": "Read the original request",
+          "description": "Check the request in full.",
+          "icon": "mail"
+        },
+        {
+          "id": "cancel",
+          "title": "Leave this request",
+          "description": "This task is outside Reach’s supported actions.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        }
+      ],
+      "error": null
+    },
+    "planner_error": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": null,
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "planner_error",
+      "revision": 1,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": null,
+      "choices": [
+        {
+          "id": "refresh",
+          "title": "Read and propose again",
+          "description": "Retry AI planning without creating anything.",
+          "icon": "refresh"
+        },
+        {
+          "id": "cancel",
+          "title": "Stop here",
+          "description": "No changes will be made.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "ai.failed",
+          "code": "AI_UNAVAILABLE"
+        }
+      ],
+      "error": "Synthetic AI outage example."
+    },
+    "verification_error": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "verification_error",
+      "revision": 5,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": {
+        "id": "769dbad9a575a9b54a326d0683f62a15",
+        "recipient": "aya@northstar.example",
+        "subject": "Re: A little more about your work",
+        "decline": false,
+        "file": {
+          "id": "portfolio-current",
+          "name": "Selected work · 2026.pdf",
+          "size": 1080,
+          "modifiedTime": "2026-09-12T10:00:00Z",
+          "revision": "3",
+          "description": "A concise selection of your recent projects.",
+          "app": "Drive"
+        },
+        "slot": {
+          "id": "slot-0",
+          "start": "2026-09-14T10:00:00.000Z",
+          "end": "2026-09-14T10:30:00.000Z",
+          "app": "Calendar"
+        },
+        "holdTitle": "Hold · Call with Aya Okafor",
+        "timezone": "Africa/Lagos",
+        "body": "Hi Aya Okafor,\n\nThank you for your interest in my work.\n\nI’ve attached Selected work · 2026.pdf.\n\nWould Monday 14 Sept, 11:00 (Africa/Lagos) work for a 30-minute call?\n\nI look forward to hearing from you.",
+        "fragments": {
+          "acknowledgement": "Thank you for your interest in my work.",
+          "closing": "I look forward to hearing from you.",
+          "metadata": {
+            "model": "synthetic-ui-fixture"
+          }
+        },
+        "ai": {
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        "reviewHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a",
+        "expires": 1789337048567
+      },
+      "choices": [
+        {
+          "id": "retry_verification",
+          "title": "Recheck and create the reviewed items",
+          "description": "Check the apps again before using the same reviewed reply.",
+          "icon": "refresh"
+        },
+        {
+          "id": "change",
+          "title": "Change my choices",
+          "description": "Return to the request.",
+          "icon": "back"
+        },
+        {
+          "id": "cancel",
+          "title": "Stop here",
+          "description": "No changes were made.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.566Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "choice.selected",
+          "choice": "slot:slot-0",
+          "stage": "slot"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "review.created",
+          "planId": "769dbad9a575a9b54a326d0683f62a15",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "choice.selected",
+          "choice": "approve",
+          "stage": "review"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "verification.failed",
+          "code": "READ_UNAVAILABLE"
+        }
+      ],
+      "error": "Reach could not refresh the app information. Your reviewed reply is preserved, and no write was attempted."
+    },
+    "recovery": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {
+        "hold": {
+          "state": "verified",
+          "id": "slot-0"
+        },
+        "draft": {
+          "state": "started"
+        }
+      },
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "recovery",
+      "revision": 6,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": {
+        "id": "134603216ec5f95b51cf180cc18d40ea",
+        "recipient": "aya@northstar.example",
+        "subject": "Re: A little more about your work",
+        "decline": false,
+        "file": {
+          "id": "portfolio-current",
+          "name": "Selected work · 2026.pdf",
+          "size": 1080,
+          "modifiedTime": "2026-09-12T10:00:00Z",
+          "revision": "3",
+          "description": "A concise selection of your recent projects.",
+          "app": "Drive"
+        },
+        "slot": {
+          "id": "slot-0",
+          "start": "2026-09-14T10:00:00.000Z",
+          "end": "2026-09-14T10:30:00.000Z",
+          "app": "Calendar"
+        },
+        "holdTitle": "Hold · Call with Aya Okafor",
+        "timezone": "Africa/Lagos",
+        "body": "Hi Aya Okafor,\n\nThank you for your interest in my work.\n\nI’ve attached Selected work · 2026.pdf.\n\nWould Monday 14 Sept, 11:00 (Africa/Lagos) work for a 30-minute call?\n\nI look forward to hearing from you.",
+        "fragments": {
+          "acknowledgement": "Thank you for your interest in my work.",
+          "closing": "I look forward to hearing from you.",
+          "metadata": {
+            "model": "synthetic-ui-fixture"
+          }
+        },
+        "ai": {
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        "reviewHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a",
+        "expires": 1789337048567
+      },
+      "choices": [
+        {
+          "id": "reconcile",
+          "title": "Check saved app actions",
+          "description": "Read the apps without creating anything.",
+          "icon": "refresh"
+        }
+      ],
+      "receipts": [
+        {
+          "app": "Drive",
+          "action": "Attachment read",
+          "id": "portfolio-current",
+          "verified": true,
+          "sha256": "1081f8b47be51dce128c343b5e1d8a95be4152128a9b32067379aff4d07c73b0"
+        },
+        {
+          "app": "Calendar",
+          "action": "Private hold created",
+          "id": "slot-0",
+          "verified": true
+        }
+      ],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "choice.selected",
+          "choice": "slot:slot-0",
+          "stage": "slot"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "review.created",
+          "planId": "134603216ec5f95b51cf180cc18d40ea",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "choice.selected",
+          "choice": "approve",
+          "stage": "review"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "approval.accepted",
+          "planId": "134603216ec5f95b51cf180cc18d40ea"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "attachment.read"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "calendar.verified",
+          "id": "slot-0"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "execution.stopped",
+          "code": "WRITE_UNCERTAIN",
+          "receipts": 2
+        }
+      ],
+      "error": "Execution was interrupted. Check recorded actions before doing anything else. An uncertain write will not be repeated."
+    },
+    "resume_review": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {
+        "hold": {
+          "state": "verified",
+          "id": "slot-0"
+        }
+      },
+      "changes": [],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "resume_review",
+      "revision": 8,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-0",
+            "start": "2026-09-14T10:00:00.000Z",
+            "end": "2026-09-14T10:30:00.000Z",
+            "app": "Calendar"
+          },
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": {
+        "id": "134603216ec5f95b51cf180cc18d40ea",
+        "recipient": "aya@northstar.example",
+        "subject": "Re: A little more about your work",
+        "decline": false,
+        "file": {
+          "id": "portfolio-current",
+          "name": "Selected work · 2026.pdf",
+          "size": 1080,
+          "modifiedTime": "2026-09-12T10:00:00Z",
+          "revision": "3",
+          "description": "A concise selection of your recent projects.",
+          "app": "Drive"
+        },
+        "slot": {
+          "id": "slot-0",
+          "start": "2026-09-14T10:00:00.000Z",
+          "end": "2026-09-14T10:30:00.000Z",
+          "app": "Calendar"
+        },
+        "holdTitle": "Hold · Call with Aya Okafor",
+        "timezone": "Africa/Lagos",
+        "body": "Hi Aya Okafor,\n\nThank you for your interest in my work.\n\nI’ve attached Selected work · 2026.pdf.\n\nWould Monday 14 Sept, 11:00 (Africa/Lagos) work for a 30-minute call?\n\nI look forward to hearing from you.",
+        "fragments": {
+          "acknowledgement": "Thank you for your interest in my work.",
+          "closing": "I look forward to hearing from you.",
+          "metadata": {
+            "model": "synthetic-ui-fixture"
+          }
+        },
+        "ai": {
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        "reviewHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a",
+        "expires": 1789337048567
+      },
+      "choices": [
+        {
+          "id": "resume",
+          "title": "Finish the remaining draft",
+          "description": "Recheck the saved hold and request. Create only the draft that was never attempted.",
+          "icon": "check"
+        }
+      ],
+      "receipts": [
+        {
+          "app": "Drive",
+          "action": "Attachment read",
+          "id": "portfolio-current",
+          "verified": true,
+          "sha256": "1081f8b47be51dce128c343b5e1d8a95be4152128a9b32067379aff4d07c73b0"
+        },
+        {
+          "app": "Calendar",
+          "action": "Private hold created",
+          "id": "slot-0",
+          "verified": true
+        }
+      ],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "choice.selected",
+          "choice": "slot:slot-0",
+          "stage": "slot"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "review.created",
+          "planId": "134603216ec5f95b51cf180cc18d40ea",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "choice.selected",
+          "choice": "approve",
+          "stage": "review"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "approval.accepted",
+          "planId": "134603216ec5f95b51cf180cc18d40ea"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "attachment.read"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "calendar.verified",
+          "id": "slot-0"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "execution.stopped",
+          "code": "WRITE_UNCERTAIN",
+          "receipts": 2
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "choice.selected",
+          "choice": "reconcile",
+          "stage": "recovery"
+        },
+        {
+          "at": "2026-09-13T21:54:08.567Z",
+          "event": "recovery.checked"
+        }
+      ],
+      "error": null
+    },
+    "repair_slot": {
+      "constraints": [
+        {
+          "rule": "duration",
+          "passed": true,
+          "detail": "Explicit numeric meeting durations must be 30 minutes."
+        }
+      ],
+      "actions": {},
+      "changes": [
+        "slot_unavailable"
+      ],
+      "analysis": {
+        "summary": "Synthetic example: the client requests a portfolio and a call.",
+        "task_type": "portfolio_and_meeting",
+        "evidence": [
+          "Could you send over your portfolio"
+        ],
+        "recommended_file_id": "portfolio-current",
+        "recommended_slot_id": "slot-0",
+        "rationale": "Fictional UI fixture. No AI was called.",
+        "metadata": {
+          "model": "synthetic-ui-fixture"
+        }
+      },
+      "planner": "anthropic",
+      "mode": "demo",
+      "stage": "slot",
+      "revision": 6,
+      "context": {
+        "timezone": "Africa/Lagos",
+        "message": {
+          "id": "mail_aya",
+          "revision": "1",
+          "name": "Aya Okafor",
+          "email": "aya@northstar.example",
+          "subject": "A little more about your work",
+          "body": "Hi Ola,\n\nWe loved the direction you shared for Northstar. Could you send over your portfolio and suggest a time for a 30-minute call? I’m flexible tomorrow.\n\nLooking forward to it,\nAya",
+          "received": "Today",
+          "app": "Gmail"
+        },
+        "files": [
+          {
+            "id": "portfolio-current",
+            "name": "Selected work · 2026.pdf",
+            "size": 1080,
+            "modifiedTime": "2026-09-12T10:00:00Z",
+            "revision": "3",
+            "description": "A concise selection of your recent projects.",
+            "app": "Drive"
+          },
+          {
+            "id": "portfolio-archive",
+            "name": "Selected work · 2025.pdf",
+            "size": 940,
+            "modifiedTime": "2025-11-20T10:00:00Z",
+            "revision": "1",
+            "description": "Your previous portfolio. Included so the choice stays yours.",
+            "app": "Drive"
+          }
+        ],
+        "slots": [
+          {
+            "id": "slot-1",
+            "start": "2026-09-14T13:00:00.000Z",
+            "end": "2026-09-14T13:30:00.000Z",
+            "app": "Calendar"
+          }
+        ]
+      },
+      "plan": {
+        "id": "4c4e8ae90df68ac64af8319a8c50a27c",
+        "recipient": "aya@northstar.example",
+        "subject": "Re: A little more about your work",
+        "decline": false,
+        "file": {
+          "id": "portfolio-current",
+          "name": "Selected work · 2026.pdf",
+          "size": 1080,
+          "modifiedTime": "2026-09-12T10:00:00Z",
+          "revision": "3",
+          "description": "A concise selection of your recent projects.",
+          "app": "Drive"
+        },
+        "slot": {
+          "id": "slot-0",
+          "start": "2026-09-14T10:00:00.000Z",
+          "end": "2026-09-14T10:30:00.000Z",
+          "app": "Calendar"
+        },
+        "holdTitle": "Hold · Call with Aya Okafor",
+        "timezone": "Africa/Lagos",
+        "body": "Hi Aya Okafor,\n\nThank you for your interest in my work.\n\nI’ve attached Selected work · 2026.pdf.\n\nWould Monday 14 Sept, 11:00 (Africa/Lagos) work for a 30-minute call?\n\nI look forward to hearing from you.",
+        "fragments": {
+          "acknowledgement": "Thank you for your interest in my work.",
+          "closing": "I look forward to hearing from you.",
+          "metadata": {
+            "model": "synthetic-ui-fixture"
+          }
+        },
+        "ai": {
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        "reviewHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a",
+        "expires": 1789337048568
+      },
+      "choices": [
+        {
+          "id": "slot:slot-1",
+          "title": "Monday 14 Sept, 14:00",
+          "description": "30 minutes · Africa/Lagos",
+          "icon": "calendar"
+        },
+        {
+          "id": "back",
+          "title": "Change the attachment",
+          "description": "Return to your files.",
+          "icon": "back"
+        },
+        {
+          "id": "cancel",
+          "title": "Stop here",
+          "description": "No changes will be made.",
+          "icon": "close"
+        }
+      ],
+      "receipts": [],
+      "trace": [
+        {
+          "at": "2026-09-13T21:54:08.568Z",
+          "event": "context.read",
+          "mode": "demo",
+          "apps": [
+            "Gmail",
+            "Drive",
+            "Calendar"
+          ]
+        },
+        {
+          "at": "2026-09-13T21:54:08.568Z",
+          "event": "ai.analyzed",
+          "model": "synthetic-ui-fixture"
+        },
+        {
+          "at": "2026-09-13T21:54:08.568Z",
+          "event": "choice.selected",
+          "choice": "prepare",
+          "stage": "intent"
+        },
+        {
+          "at": "2026-09-13T21:54:08.568Z",
+          "event": "choice.selected",
+          "choice": "file:portfolio-current",
+          "stage": "file"
+        },
+        {
+          "at": "2026-09-13T21:54:08.568Z",
+          "event": "choice.selected",
+          "choice": "slot:slot-0",
+          "stage": "slot"
+        },
+        {
+          "at": "2026-09-13T21:54:08.568Z",
+          "event": "ai.drafted",
+          "model": "synthetic-ui-fixture",
+          "tone": "natural"
+        },
+        {
+          "at": "2026-09-13T21:54:08.568Z",
+          "event": "review.created",
+          "planId": "4c4e8ae90df68ac64af8319a8c50a27c",
+          "contextHash": "5a56c4c1ad2b5b457ba35fa57d3d2a197b45044faa493f254ea2ac325151865a"
+        },
+        {
+          "at": "2026-09-13T21:54:08.568Z",
+          "event": "choice.selected",
+          "choice": "approve",
+          "stage": "review"
+        },
+        {
+          "at": "2026-09-13T21:54:08.568Z",
+          "event": "approval.invalidated"
+        },
+        {
+          "at": "2026-09-13T21:54:08.568Z",
+          "event": "choice.selected",
+          "choice": "repair",
+          "stage": "blocked"
+        }
+      ],
+      "error": null
+    }
+  }
+}
